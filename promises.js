@@ -1,4 +1,4 @@
-/* //crear una funcion que retorne una promesa, esa promesa, va a ejecutar una logica .. 
+/* //crear una funcion que retorne una promesa, esa promesa, va a ejecutar una logica ..
 y esa promesa se va a resolver dos segundos despues de haber sido invocada.
 //el parametro que reciba debe resolverla
 //mifuncion(5) --> return promesa a los dos segundos, resuelve con ese 5
@@ -23,7 +23,7 @@ compareNumberWithCallback((resolveValue) => console.log(resolveValue.number),
 
 // practice with promises
 
-/* function compareNumber(number) {
+function compareNumber(number) {
     const promise = new Promise((resolve, reject) => {
         setTimeout(() => {
             const numberToCompare = 5
@@ -33,15 +33,15 @@ compareNumberWithCallback((resolveValue) => console.log(resolveValue.number),
     return promise
 }
 
-compareNumber(6).then((resolveValue) => {
-    console.log(resolveValue)
+compareNumber(5).then((resolveValue) => {
+    console.log('promise example ' + resolveValue)
 }).catch((resolveValue) => console.log(resolveValue))
- */
+
 
 
 //practice with async await
 
-/* const compareNumberPromise = (number) => {
+const compareNumberPromise = (number) => {
     const numberToCompare = 5
     promise = new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -54,19 +54,17 @@ compareNumber(6).then((resolveValue) => {
 async function makeRequest() {
     try {
         const response = await compareNumberPromise(5)
-        console.log(response)
+        console.log('async await example ' + response)
     } catch (error) {
         console.log(error)
     }
 }
 
 makeRequest()
- */
-
 
 //other examples with promises, promises.all, promises.race
 
-/* const recordVideoOne = new Promise((resolve, reject) => {
+const recordVideoOne = new Promise((resolve, reject) => {
     resolve('video 1 recorded')
 })
 
@@ -80,4 +78,4 @@ const recordVideoThree = new Promise((resolve, reject) => {
 
 Promise.all([recordVideoOne, recordVideoTwo, recordVideoThree]).then((responses) => console.log(responses))
 
-Promise.race([recordVideoTwo, recordVideoThree, recordVideoOne]).then((response) => console.log(response)) */
+Promise.race([recordVideoTwo, recordVideoThree, recordVideoOne]).then((response) => console.log(response))
